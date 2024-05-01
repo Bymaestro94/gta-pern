@@ -1,0 +1,90 @@
+.wrapper {
+	width: 100vw;
+	min-height: 100vh;
+	position: relative;
+}
+
+.wrapper > form {
+	width: max-content;
+	padding: 0.75rem;
+	position: absolute;
+	left: 1.25rem;
+	top: 1.25rem;
+	animation: slideIn 2s ease-in-out;
+}
+
+.wrapper > form > h1 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin-bottom: 0.75rem;
+}
+
+.wrapper > form > input {
+	display: block;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding: 0.75rem 0.75rem;
+	margin-bottom: 0.75rem;
+	width: 100%;
+	border-width: 1px;
+	border-color: transparent;
+	background-color: rgba(0, 0, 0, 0.3);
+	outline: none;
+	font-size: 1rem;
+	transition: border-color 0.35s linear;
+}
+.wrapper > form > input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+.wrapper > form > input:focus {
+	border: 1px solid #ffb3c0;
+}
+
+.wrapper > form > button {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 0.25rem 1rem;
+	border: 1px solid #fff;
+	display: inline-block;
+	margin-top: 0.5rem;
+	background-color: transparent;
+	transition: box-shadow 0.4s linear, background-color 0.4s linear;
+	cursor: pointer;
+}
+
+.wrapper > form > button:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.success {
+	color: rgb(74, 222, 128);
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 500;
+	margin: auto;
+	animation: fade 0.4s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-110%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
